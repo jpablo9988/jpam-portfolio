@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import MainTopNav from './parts/MainTopNav.tsx'
-import MobileNav from './parts/MobileNav.tsx';
+import MainTopNav from './parts/MainTopNav'
+import MobileNav from './parts/MobileNav';
 
 export default function TopHeader() {
     const [isTopOfPage, setIsTopOnPage] = useState<boolean>(false)
