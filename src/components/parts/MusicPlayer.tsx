@@ -10,6 +10,8 @@ import RewindLogoLight from "@/assets/music_logos/RewindLogoLight.svg"
 import RandomizeLogoLight from "@/assets/music_logos/RandomizeLogoLight.svg"
 import RewindLogoSolo from "@/assets/music_logos/RewindLogoLightSolo.svg"
 import ToggleButton from "./buttons/ToggleButton";
+import LoadingSpinner from "@/assets/LoadingSpinner.svg"
+import ScaleDiv from "./buttons/ScaleDiv";
 export const MusicPlayer = () => {
     const [music, setMusic] = useState<Track>();
     const [currentTime, setCurrentTime] = useState<number>(0);
@@ -17,6 +19,7 @@ export const MusicPlayer = () => {
     const intervalTimer = useInterval(onTimeChange, 100, false);
     const [isRandom, setIsRandom] = useState<boolean>(false);
     const [loopType, setLoopType] = useState<number>(0);// loopType: 0 = No Loop, 1 = Loop, 2 = LoopCurrent
+    const [loadedMusic, setLoadedMusic] = useState<boolean>(false);
     let currentMusicId = useRef<number | null>(null);
 
     function handleToggle() {
@@ -136,7 +139,24 @@ export const MusicPlayer = () => {
             currentMusicId.current = null;
         }
         if (selectedMusic.album != -1 && selectedMusic.track != -1) {
-            setMusic(albums.getAlbums[selectedMusic.album].tracks[selectedMusic.track]);
+            setMusic(prev => {
+                if (prev != undefined) {
+                    prev.src.off("load");
+                    prev.src.off("play");
+                    setLoadedMusic(false);
+                }
+                prev = albums.getAlbums[selectedMusic.album].tracks[selectedMusic.track];
+                prev.src.load();
+                prev.src.on("load", () => {
+                    console.log("Loaded - True!")
+                    setLoadedMusic(true);
+                })
+                prev.src.on("play", () => {
+                    console.log("Playing - True!")
+                    setLoadedMusic(true);
+                })
+                return prev;
+            });
         }
         setCurrentTime(0);
     }, [selectedMusic])
@@ -154,14 +174,20 @@ export const MusicPlayer = () => {
                 logoLabel="A logo of a skip backwards button normally found on music players."
             />
             {playingMusic ?
-                <ScaleButton
-                    defaultLogo={PauseLogo}
-                    className="size-4  min-w-4 min-h-4"
-                    onClickAction={handleToggle}
-                    buttonLabel="Pauses the current song."
-                    logoLabel="A logo of a pause button normally found on music players."
+                (
+                    (loadedMusic) ?
+                        <ScaleButton
+                            defaultLogo={PauseLogo}
+                            className="size-4  min-w-4 min-h-4"
+                            onClickAction={handleToggle}
+                            buttonLabel="Pauses the current song."
+                            logoLabel="A logo of a pause button normally found on music players."
 
-                />
+                        /> : <ScaleDiv
+                            defaultLogo={LoadingSpinner}
+                            className="spinner size-4 min-w-4 min-h-4"
+                            logoLabel="A loading spinner."
+                        />)
                 :
                 <ScaleButton
                     defaultLogo={PlayLogo}
@@ -170,6 +196,7 @@ export const MusicPlayer = () => {
                     buttonLabel="Plays the current song. "
                     logoLabel="A logo of a play button normally found on music players."
                 />
+
             }
             <ScaleButton
                 defaultLogo={FastFowardLogo}

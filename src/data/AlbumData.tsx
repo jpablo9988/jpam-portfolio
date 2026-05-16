@@ -67,7 +67,8 @@ export class Albums {
                         src: new Howl({
                             src: CoolEvening,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: true
                         })
                     },
                     {
@@ -77,7 +78,9 @@ export class Albums {
                         src: new Howl({
                             src: Parsecs,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
+
                         })
                     },
                     {
@@ -87,7 +90,9 @@ export class Albums {
                         src: new Howl({
                             src: GrindingGold,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
+
                         })
                     },
                     {
@@ -97,7 +102,9 @@ export class Albums {
                         src: new Howl({
                             src: Waiting,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
+
                         })
                     },
                     {
@@ -107,7 +114,9 @@ export class Albums {
                         src: new Howl({
                             src: WalkingClouds,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
+
                         })
                     },
                 ]
@@ -124,7 +133,9 @@ export class Albums {
                         src: new Howl({
                             src: Prelude,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
+
                         })
                     },
                     {
@@ -135,6 +146,8 @@ export class Albums {
                             src: Main,
                             autoplay: false,
                             loop: false
+                            ,
+                            preload: false
                         })
                     },
                     {
@@ -145,6 +158,8 @@ export class Albums {
                             src: TutorialSpace,
                             autoplay: false,
                             loop: false
+                            ,
+                            preload: false
                         })
                     },
                     {
@@ -154,7 +169,8 @@ export class Albums {
                         src: new Howl({
                             src: Majriti,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -164,7 +180,8 @@ export class Albums {
                         src: new Howl({
                             src: BattleMajriti,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -174,7 +191,8 @@ export class Albums {
                         src: new Howl({
                             src: Graveyard,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -184,7 +202,8 @@ export class Albums {
                         src: new Howl({
                             src: Wandering,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -194,7 +213,8 @@ export class Albums {
                         src: new Howl({
                             src: Floating,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     }
                 ]
@@ -212,7 +232,8 @@ export class Albums {
                         src: new Howl({
                             src: MainMenu,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -222,7 +243,8 @@ export class Albums {
                         src: new Howl({
                             src: Tutorial,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -232,7 +254,8 @@ export class Albums {
                         src: new Howl({
                             src: Results,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -242,7 +265,8 @@ export class Albums {
                         src: new Howl({
                             src: InteractiveTutorial,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
 
@@ -253,7 +277,8 @@ export class Albums {
                         src: new Howl({
                             src: AllJingles,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     }
                 ]
@@ -270,7 +295,8 @@ export class Albums {
                         src: new Howl({
                             src: MidnightExpress,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
 
                         })
                     },
@@ -281,7 +307,8 @@ export class Albums {
                         src: new Howl({
                             src: LadyInBlack,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -291,7 +318,8 @@ export class Albums {
                         src: new Howl({
                             src: FindTheTruth,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -301,7 +329,8 @@ export class Albums {
                         src: new Howl({
                             src: ABitOfFun,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -311,7 +340,8 @@ export class Albums {
                         src: new Howl({
                             src: MorningExpress,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -321,7 +351,8 @@ export class Albums {
                         src: new Howl({
                             src: PlotThickens,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     },
                     {
@@ -331,7 +362,8 @@ export class Albums {
                         src: new Howl({
                             src: Culprit,
                             autoplay: false,
-                            loop: false
+                            loop: false,
+                            preload: false
                         })
                     }
                 ]
@@ -347,7 +379,8 @@ export class Albums {
                     src: new Howl({
                         src: DiscoTenna,
                         autoplay: false,
-                        loop: false
+                        loop: false,
+                        preload: false
                     })
                 },
                 {
@@ -357,7 +390,8 @@ export class Albums {
                     src: new Howl({
                         src: Chapter12Medley,
                         autoplay: false,
-                        loop: false
+                        loop: false,
+                        preload: false
                     })
                 },
                 {
@@ -367,7 +401,8 @@ export class Albums {
                     src: new Howl({
                         src: TennaPreTenna,
                         autoplay: false,
-                        loop: false
+                        loop: false,
+                        preload: false
                     })
                 }]
             }
