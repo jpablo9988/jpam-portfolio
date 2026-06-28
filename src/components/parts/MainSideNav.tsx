@@ -1,4 +1,3 @@
-import AboutLogo from "@/assets/about_logos/AboutLogo.svg"
 import ContactLogo from "@/assets/contact_logos/ContactSprite.svg"
 import ContactLogoHover from "@/assets/contact_logos/ContactSprite_hover.svg"
 import ContactLogoDark from "@/assets/contact_logos/ContactSpriteD.svg"
