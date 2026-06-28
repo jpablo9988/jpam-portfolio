@@ -28,15 +28,6 @@ export default function MainSideNav() {
             buttonLabel: 'Navigates you to the home screen. ',
             logoLabel: 'A logo of a pixel art house. '
         },
-
-        {
-            title: 'about',
-            type: 'scale',
-            lightLogo: AboutLogo,
-            route: '/about',
-            buttonLabel: 'Navigates you to the about section. ',
-            logoLabel: 'A logo of an information bubble with an i in the center. '
-        },
         {
             title: 'portfolio',
             type: 'dropdown',

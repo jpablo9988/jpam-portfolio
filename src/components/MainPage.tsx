@@ -4,7 +4,6 @@ import TopHeader from "./TopHeader";
 import ArtProjects from '@/components/pages/ArtProjects';
 import ContactMe from '@/components/pages/ContactMe';
 import About from '@/components/pages/About';
-import Home from '@/components/pages/Home';
 import ErrorPage from '@/components/pages/ErrorPage';
 import AboutTileG from "@/assets/bg_imgs/AboutTile_Simple_G.png"
 import MusicProjects from "./pages/MusicProjects";
@@ -24,11 +23,10 @@ function MainPage() {
                 <div id="main_screen" dir="ltr" className="flex flex-1 sm:ps-35 overflow-auto ">
                     <div className="w-full">
                         <Routes>
-                            <Route path="/" element={<Home />}></Route>
+                            <Route path="/" element={<About />}></Route>
                             <Route path="/projects/art" element={<ArtProjects />}></Route>
                             <Route path="/projects/music" element={<MusicProjects />}></Route>
                             <Route path="/projects/dev" element={<DevProjects />}></Route>
-                            <Route path="/about" element={<About />}></Route>
                             <Route path="/contact_me" element={<ContactMe />}></Route>
                             <Route path="/projects/harmonic-rhythm/:id" element={<HarmonicRhythmBlog />}></Route>
                             <Route path="/projects/manafuse/:id" element={<ManafuseBlog />}></Route>

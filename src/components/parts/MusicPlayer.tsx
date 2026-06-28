@@ -170,7 +170,7 @@ export const MusicPlayer = () => {
                 defaultLogo={FastFowardLogo}
                 className="size-8 max-md:size-6 min-w-6 min-h-6 rotate-180"
                 onClickAction={() => { handleNext(selectedMusic.album, selectedMusic.track, -1, false) }}
-                buttonLabel="Goes to any previous song in an album playlist."
+                buttonLabel="Goes to any previous song in an al     bum playlist."
                 logoLabel="A logo of a skip backwards button normally found on music players."
             />
             {playingMusic ?
